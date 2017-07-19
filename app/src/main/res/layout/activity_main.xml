@@ -43,12 +43,24 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-
-    <android.support.v7.widget.RecyclerView
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:srlEnableLoadmore="false"
+        >
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/classicsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <android.support.v7.widget.RecyclerView
         android:id="@+id/rc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+         />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
